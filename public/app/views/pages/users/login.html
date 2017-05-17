@@ -1,0 +1,48 @@
+
+        <!--ng-show  apperat when register.successMsg-->
+<div class=page-header>
+    <h1>Log In</h1>
+</div>
+
+<div class="login-wrap">
+	<div class="login-html">
+	
+		<label for="tab-2" class="tab">Sign In</label>
+		<div class="login-form">
+			<form ng-submit="main.doLogin(loginData);">
+				<div class="group">
+					<label  class="label">Username</label>
+					<input  type="text" class="input" placeholder="Enter Username" name="username" ng-model="main.loginData.username">
+				</div>
+				<div class="group">
+					<label  class="label">Password</label>
+					<input  type="password" class="input" placeholder="Enter Password"  name="password" ng-model="main.loginData.password" >
+				</div>
+				
+				<div class="group">
+                    <button class="button" type="submit"> Sign In </button> 
+                    <hr>
+                    <button type="button" class="btn btn-success" ng-click="main.facebook();">Facebook</button>
+				</div>
+			</div>
+			</form>
+            
+		</div>
+	</div>
+</div>
+
+        <br>
+    <!--ng-show  apperat when register.successMsg-->
+    <div class="row show-hide-message" ng-show="main.successMsg">
+        <!--this is how angular pass data with double {} -> {{}}-->
+        <!--we need to write also register from <form ng-submit="register.regUser(regData);"> so we will write {{register.successMsg}}-->
+        <div class="alert alert-success">{{main.successMsg}}</div>
+    </div>
+    <br>
+     <!--ng-show  apperat when register.successMsg-->
+     <div class="row show-hide-message" ng-show="main.errorMsg">
+        <div class="alert alert-danger">{{main.errorMsg}}</div>
+    </div>
+      <div class="row show-hide-message" ng-show="facebook.errorMsg">
+        <div class="alert alert-danger">{{facebook.errorMsg}}</div>
+    </div>
