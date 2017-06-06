@@ -11,6 +11,5 @@ var QuestionSchema = new Schema({
     correctanswer:{type:String,required:true}
 });
 
-xf\';lk////;;''\\\\\\\\\\4787897944421210000111gsdgf=
 //exports in the server file
 module.exports=mongoose.model("Question", QuestionSchema);
